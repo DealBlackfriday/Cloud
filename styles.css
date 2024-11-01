@@ -59,3 +59,122 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+/* Reset and Basic Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 10px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header nav a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section Titles */
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+/* Featured Section and Post Listing */
+.featured, .post-list {
+    display: grid;
+    gap: 20px;
+}
+
+/* Post Card Styling */
+.post {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Image */
+.post img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Title and Description Styling */
+.post h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.post p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Read More Button */
+.post a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+/* Grid Layout */
+.featured {
+    grid-template-columns: 1fr; /* Single column on small screens */
+}
+
+.post-list {
+    grid-template-columns: 1fr; /* Single column on small screens */
+}
+
+/* Two-column layout for larger screens */
+@media (min-width: 600px) {
+    .featured {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .post-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
