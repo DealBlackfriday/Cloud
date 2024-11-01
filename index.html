@@ -20,39 +20,57 @@
 
     <section class="featured">
         <h2>Featured Hosting Solutions</h2>
-        <div class="featured-posts">
-            <article class="post">
-                <h3>Bluehost - Top Choice for WordPress</h3>
-                <p>Bluehost offers excellent support and a beginner-friendly setup process.</p>
-                <a href="post.html">Read More</a>
-            </article>
-            <article class="post">
-                <h3>HostGator - Best for Affordable Plans</h3>
-                <p>HostGator provides reliable service at a budget-friendly price.</p>
-                <a href="post.html">Read More</a>
-            </article>
+        <div class="featured-posts" id="featured-posts">
+            <!-- Featured posts will be dynamically inserted here -->
         </div>
     </section>
 
     <main>
         <h2>All Hosting Reviews</h2>
-        <div class="post-list">
-            <article class="post">
-                <h3>SiteGround - Great for Performance</h3>
-                <p>Known for excellent uptime and customer service.</p>
-                <a href="post.html">Read Review</a>
-            </article>
-            <article class="post">
-                <h3>InMotion Hosting - Best for Business Hosting</h3>
-                <p>Features tailored to small and medium-sized businesses.</p>
-                <a href="post.html">Read Review</a>
-            </article>
-            <!-- Add more articles as needed -->
+        <div class="post-list" id="post-list">
+            <!-- All posts will be dynamically inserted here -->
         </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Hosting Reviews. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Fetch and display posts from JSON
+        async function loadPosts() {
+            try {
+                const response = await fetch('posts.json');
+                const posts = await response.json();
+
+                const featuredContainer = document.getElementById('featured-posts');
+                const postListContainer = document.getElementById('post-list');
+
+                posts.forEach((post, index) => {
+                    const postHTML = `
+                        <article class="post">
+                            <img src="${post.image}" alt="${post.title}">
+                            <h3>${post.title}</h3>
+                            <p>${post.description}</p>
+                            <a href="post.html">Read Review</a>
+                        </article>
+                    `;
+                    
+                    // Display the first 3 posts in the featured section
+                    if (index < 3) {
+                        featuredContainer.innerHTML += postHTML;
+                    }
+                    
+                    // Display all posts in the main post list
+                    postListContainer.innerHTML += postHTML;
+                });
+            } catch (error) {
+                console.error('Error loading posts:', error);
+            }
+        }
+
+        // Load posts when the page loads
+        window.onload = loadPosts;
+    </script>
 </body>
 </html>
