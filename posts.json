@@ -1,0 +1,52 @@
+[
+    {
+        "title": "Bluehost - Best for WordPress",
+        "image": "https://via.placeholder.com/300",
+        "description": "Comprehensive solution with excellent support and performance."
+    },
+    {
+        "title": "HostGator - Affordable Hosting",
+        "image": "https://via.placeholder.com/300",
+        "description": "HostGator provides reliable service at a budget-friendly price."
+    },
+    {
+        "title": "SiteGround - High Performance",
+        "image": "https://via.placeholder.com/300",
+        "description": "Known for excellent uptime and customer support."
+    },
+    {
+        "title": "InMotion - Business Hosting",
+        "image": "https://via.placeholder.com/300",
+        "description": "Best for small and medium-sized business needs."
+    },
+    {
+        "title": "A2 Hosting - Fast Speeds",
+        "image": "https://via.placeholder.com/300",
+        "description": "Great for speed optimization and reliability."
+    },
+    {
+        "title": "GreenGeeks - Eco-Friendly Hosting",
+        "image": "https://via.placeholder.com/300",
+        "description": "Environmentally friendly hosting with excellent performance."
+    },
+    {
+        "title": "DreamHost - Best for Flexibility",
+        "image": "https://via.placeholder.com/300",
+        "description": "Highly flexible with great scalability options."
+    },
+    {
+        "title": "iPage - Affordable for Beginners",
+        "image": "https://via.placeholder.com/300",
+        "description": "Budget-friendly hosting solution for new users."
+    },
+    {
+        "title": "WP Engine - Managed WordPress",
+        "image": "https://via.placeholder.com/300",
+        "description": "High-performance managed hosting for WordPress sites."
+    },
+    {
+        "title": "Liquid Web - Premium Hosting",
+        "image": "https://via.placeholder.com/300",
+        "description": "High-end hosting solutions for demanding applications."
+    }
+]
